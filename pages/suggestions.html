@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MNC - Faites vos suggestions !</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9ab0389e11.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link href="../CSS/cssStyle.css" type="text/css" rel="stylesheet" />
+    <link href="../CSS/FormCSS.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../MobileMenu.js"></script>
+
+    <style>
+
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+            table caption {
+                font-size: 1.5em;
+                margin: .5em 0 .75em;
+            }
+
+            table tr {
+                background-color: #f8f8f8;
+                border: 1px solid #ddd;
+                padding: .35em;
+            }
+
+            table th,
+            table td {
+                padding: .625em;
+                text-align: center;
+            }
+
+            table th {
+                font-size: .85em;
+                letter-spacing: .1em;
+                text-transform: uppercase;
+            }
+
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+            }
+
+                table caption {
+                    font-size: 1.3em;
+                }
+
+                table thead {
+                    border: none;
+                    clip: rect(0 0 0 0);
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                }
+
+                table tr {
+                    border-bottom: 3px solid #ddd;
+                    display: block;
+                    margin-bottom: .625em;
+                }
+
+                table td {
+                    border-bottom: 1px solid #ddd;
+                    display: block;
+                    font-size: .8em;
+                    text-align: right;
+                }
+
+                    table td::before {
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+
+                    table td:last-child {
+                        border-bottom: 0;
+                    }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="BarMenu" id="myBarMenu">
+        <a href="../index.html"><strong>MNC</strong></a>
+        <a href="coups-de-coeur.html">Coups de coeur</a>
+        <div class="deroulant">
+            <button class="deroulantBtn">
+                Classements
+            </button>
+            <div class="deroulant-content">
+                <a href="classementW.html">Classement International</a>
+                <a href="classementFR.html">Classement Français</a>
+            </div>
+        </div>
+        <a href="evenements.html">Événements</a>
+        <a href="suggestions.html" class="active">Suggestions</a>
+        <a href="contact.html" ">Contact</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    
+        <h1 align="center" <strong>Suggestions</strong> - À vous de jouer</h2>
+    <p align="center" ><i>Inscrivez ici les titres, albums ou simplement artistes qui méritent d'être connu.</i></p>
+    <p align="center"><strong>Partageons les talents cachés !</strong></p>
+
+    <table id="table-dyn">
+        <caption>Suggestions postées</caption>
+            <thead>
+            <tr>
+                 <th scope="col"><strong>Prénom de celui qui propose</strong></th>
+                 <th scope="col"><strong>Nom de l'artiste</strong></th>
+                <th scope="col"><strong>Nom de du morceau</strong></th>
+                 <th scope="col">Analyse du morceau (points forts, pourquoi le mettre en avant etc)</th>
+            </tr>
+            </thead>
+                <tbody id="table-content">
+            </tbody>
+    </table><br /><br />
+
+
+    <div class="TableContent">
+        <form method="post">
+            <div class="row">
+                <div class="form1">
+                    <label for="prenom">Votre prénom</label>
+                </div>
+                <div class="form2">
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom ou pseudo" class="form-input"><br>
+                    <p class="txt-error"></p>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="form1">
+                        <label for="nomA">Nom de l'artiste</label>
+                    </div>
+                    <div class="form2">
+                        <input type="text" id="nomA" name="nomA" placeholder="Le nom du groupe ou de l'artiste" class="form-input"><br>
+                        <p class="txt-error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form1">
+                        <label for="nomT">Nom du morceau</label>
+                    </div>
+                    <div class="form2">
+                        <input type="text" id="nomT" name="nomT" placeholder="Le nom de l'album ou du titre" class="form-input"><br>
+                        <p class="txt-error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form1">
+                        <label for="message">Les raisons du choix</label>
+                    </div>
+                    <div class="form2">
+                        <textarea type="text" id="raison" name="raison" placeholder="Pourquoi ce titre ?" class="form-input" style="height:200px"></textarea><br>
+                        <p class="txt-error"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <input id="btn-add" type="button" value="Ajouter" class="form-input btn-succes"><br>
+                </div>
+           </form>
+    </div><br />
+
+
+    <footer>
+    <p><a href="a-propos.html" id="a-propos"style="color:white; font-size:15px;"><br>Qui sommes-nous ?</a></p>
+    <a href=""><i class="fab fa-facebook"></i></a>
+    <a href=""><i class="fab fa-twitter"></i></a>
+    <a href=""><i class="fab fa-youtube"></i></a>
+    <a href=""><i class="fab fa-snapchat"></i></a>
+    <a href=""><i class="fab fa-instagram"></i></a>
+    <p> Développé par <strong>Théo Goujon, Thomas Ludger et Cihan-Can Onaran.</strong></p>
+</footer>
+
+
+    <script>
+
+    var modal = document.getElementById('ticketModal');
+    var btnAdd = document.getElementById('btn-add');
+    window.onclick = function (event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+    }
+    btnAdd.onclick = function (event) {
+    is_error = 0;
+    var prenom = document.getElementById('prenom').value;
+    var nomA = document.getElementById('nomA').value;
+    var nomT = document.getElementById('nomT').value;
+    var raison = document.getElementById('raison').value;
+    var tableau = document.getElementById('table-content');
+    var error = document.getElementsByClassName('txt-error');
+    error[0].innerHTML = "";
+    error[1].innerHTML = "";
+    error[2].innerHTML = "";
+    error[3].innerHTML = "";
+    if (prenom == "") {
+    error[0].innerHTML = "Veuillez remplir ce champs";
+    is_error++;
+    }
+    else if (nomA == "") {
+    error[1].innerHTML = "Veuillez remplir ce champs";
+    is_error++;
+    }
+    else if (nomT == "") {
+    error[2].innerHTML = "Veuillez remplir ce champs";
+    is_error++;
+    }
+    else if (raison == "") {
+    error[3].innerHTML = "Veuillez remplir ce champs";
+    is_error++;
+    }
+    else{
+    var trNode = document.createElement("tr");
+    var tdNode = document.createElement("th");
+    tdNode.style.fontWeight = 'normal';
+    var textnode = document.createTextNode(prenom);
+    tdNode.appendChild(textnode);
+    trNode.appendChild(tdNode);
+
+    var tdNode = document.createElement("th");
+    tdNode.style.fontWeight = 'normal';
+    var textnode = document.createTextNode(nomA);
+    tdNode.appendChild(textnode);
+    trNode.appendChild(tdNode);
+
+    var tdNode = document.createElement("th");
+    tdNode.style.fontWeight = 'normal';
+    var textnode = document.createTextNode(nomT);
+    tdNode.appendChild(textnode);
+    trNode.appendChild(tdNode);
+
+    var tdNode = document.createElement("th");
+    tdNode.style.fontWeight = 'normal';
+    var textnode = document.createTextNode(raison);
+    tdNode.appendChild(textnode);
+    trNode.appendChild(tdNode);
+
+    tableau.appendChild(trNode);
+    document.getElementById('prenom').value = "";
+    document.getElementById('nomA').value = "";
+    document.getElementById('nomT').value = "";
+    document.getElementById('raison').value = "";
+    }
+    }</script>
+
+
+    </body>
+</html>
+

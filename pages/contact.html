@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MNC - Des questions ? Des idées d'améliorations ?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9ab0389e11.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link href="../CSS/cssStyle.css" type="text/css" rel="stylesheet" />
+    <link href="../CSS/FormCSS.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../MobileMenu.js"></script>
+
+</head>
+<body>
+    <div class="BarMenu" id="myBarMenu">
+        <a href="../index.html"><strong>MNC</strong></a>
+        <a href="coups-de-coeur.html">Coups de coeur</a>
+        <div class="deroulant">
+            <button class="deroulantBtn">
+                Classements
+            </button>
+            <div class="deroulant-content">
+                <a href="classementW.html">Classement International</a>
+                <a href="classementFR.html">Classement Français</a>
+            </div>
+        </div>
+        <a href="evenements.html">Événements</a>
+        <a href="suggestions.html">Suggestions</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <h1 align="center">Contactez-nous !</h1>
+    <h4 align="center">Des questions ? Des idées d'améliorations ? N'hésitez-pas à nous contacter.</h4>
+    <br />
+
+    <div class="TableContent">
+        <form>
+            <div class="row">
+                <div class="form1">
+                    <label for="prenom">Prénom</label>
+                </div>
+                <div class="form2">
+                    <input type="text" id="name" name="Prénom" placeholder="Votre prénom...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form1">
+                    <label for="nom">Nom</label>
+                </div>
+                <div class="form2">
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form1">
+                    <label for="age">Age</label>
+                </div>
+                <div class="form2">
+                    <select id="age" name="age">
+                        <option value="18"><18</option>
+                        <option value="1826">18-26</option>
+                        <option value="2736">27-36</option>
+                        <option value="37-50">37-50</option>
+                        <option value="+50">>50</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form1">
+                    <label for="motif">Il s'agit...</label>
+                </div>
+                <div class="form2">
+                    <select id="motif" name="motif">
+                        <option value="recommandation">d'une recommandation</option>
+                        <option value="erreur">d'une erreur reperée sur le site</option>
+                        <option value="question">d'une question générale</option>
+                        <option value="autre">d'autre chose</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form1">
+                    <label for="message">Message</label>
+                </div>
+                <div class="form2">
+                    <textarea id="message" name="message" placeholder="Ecrivez votre message" style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="button" value="Envoyer">
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="a-propos.html" id="a-propos" style="color:white; font-size:15px;"><br>Qui sommes-nous ?</a></p>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
+        <a href=""><i class="fab fa-snapchat"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <p> Développé par <strong>Théo Goujon, Thomas Ludger et Cihan-Can Onaran.</strong></p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MNC - Découvrez les prochaines événements !</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9ab0389e11.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link href="../CSS/cssStyle.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../MobileMenu.js"></script>
+
+    <style>
+
+
+        table {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+            table caption {
+                font-size: 1.5em;
+                margin: .5em 0 .75em;
+            }
+
+            table tr {
+                background-color: #f8f8f8;
+                border: 1px solid #ddd;
+                padding: .35em;
+            }
+
+            table th,
+            table td {
+                padding: .625em;
+                text-align: center;
+            }
+
+            table th {
+                font-size: .85em;
+                letter-spacing: .1em;
+                text-transform: uppercase;
+                background-color: #E0DEDE;
+            }
+
+        tr:nth-child(even) {
+            background-color: #E0DEDE;
+        }
+
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+            }
+
+                table caption {
+                    font-size: 1.3em;
+                }
+
+                table thead {
+                    border: none;
+                    clip: rect(0 0 0 0);
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                }
+
+                table tr {
+                    border-bottom: 3px solid #ddd;
+                    display: block;
+                    margin-bottom: .625em;
+                }
+
+                table td {
+                    border-bottom: 1px solid #ddd;
+                    display: block;
+                    font-size: .8em;
+                    text-align: right;
+                }
+
+                    table td::before {
+                        content: attr(data-label);
+                        float: left;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+
+                    table td:last-child {
+                        border-bottom: 0;
+                    }
+        }
+    </style>
+</head>
+<body>
+    <div class="BarMenu" id="myBarMenu">
+        <a href="../index.html"><strong>MNC</strong></a>
+        <a href="coups-de-coeur.html">Coups de coeur</a>
+        <div class="deroulant">
+            <button class="deroulantBtn">
+                Classements
+            </button>
+            <div class="deroulant-content">
+                <a href="classementW.html">Classement International</a>
+                <a href="classementFR.html">Classement Français</a>
+            </div>
+        </div>
+        <a href="evenements.html" class="active">Événements</a>
+        <a href="suggestions.html">Suggestions</a>
+        <a href="contact.html" ">Contact</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <h1 align="center">Les prochains événements musicaux en France </h1>
+    <p align="center"><i>Concert, Festival...Retrouvez tout sur cet page !</i></p>
+
+
+    
+        <table id="table-dyn">
+
+            <thead>
+                <tr>
+                    <th scope="col"><strong>Artiste</strong></th>
+                    <th scope="col"><strong>Événement</strong></th>
+                    <th scope="col"><strong>Date</strong></th>
+                    <th scope="col"><strong>Salle et Ville</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ninho</td>
+                    <td>Tournée 2019-2020</td>
+                    <td>10/03/2020 - 22/09/2020</td>
+                    <td>Divers lieux</td>
+                </tr>
+                <tr>
+                    <td>PNL</td>
+                    <td>Tournée 2019-2020</td>
+                    <td>30/05/2020 - 26/02/2021</td>
+                    <td>Divers lieux</td>
+                </tr>
+                <tr>
+                    <td>Last Train</td>
+                    <td>Concert - The Big Picture</td>
+                    <td>04/11/2020</td>
+                    <td>Olympia - Paris</td>
+                </tr>
+                <tr>
+                    <td>Sting</td>
+                    <td>Concert - Tournee My Song</td>
+                    <td>01/07/2021</td>
+                    <td>Château de Chambord</td>
+                </tr>
+                <tr>
+                    <td>Iggy Pop</td>
+                    <td>Tournée Free</td>
+                    <td>03/04/2020 - 12/04/2021</td>
+                    <td>La Gaité Lyrique - Paris</td>
+                </tr>
+            </tbody>
+        </table>
+       
+       
+
+
+        <!-- Footer -->
+        <footer>
+            <p><a href="a-propos.html" id="a-propos" style="color:white; font-size:15px;"><br>Qui sommes-nous ?</a></p>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-snapchat"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <p> Développé par <strong>Théo Goujon, Thomas Ludger et Cihan-Can Onaran.</strong></p>
+        </footer>
+</body>
+</html>
